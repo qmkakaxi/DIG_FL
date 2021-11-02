@@ -95,7 +95,7 @@ if __name__ == '__main__':
 
     print(net_train)
     net_train.train()
-    net_test=CNNMnist(args=args).to(args.device)
+
 
     w_glob = net_train.state_dict()
     loss_train = []
