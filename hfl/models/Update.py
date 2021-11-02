@@ -23,21 +23,6 @@ class DatasetSplit(Dataset):
         return image, label
 
 
-# class DatasetRemove(Dataset):
-#     def __init__(self, dataset, num_to_remove):
-#         self.dataset = dataset
-#         self.idxs=[]
-#         for i in range(len(dataset)):
-#             self.idxs.append(i)
-#         for i in range(len(num_to_remove)):
-#             self.idxs.pop(num_to_remove[i])
-#
-#     def __len__(self):
-#         return len(self.idxs)
-#
-#     def __getitem__(self, item):
-#         image, label = self.dataset[self.idxs[item]]
-#         return image, label
 
 
 class LocalUpdate(object):
@@ -52,7 +37,6 @@ class LocalUpdate(object):
         net.train()
         # train and update
         optimizer = torch.optim.SGD(net.parameters(), lr=self.args.lr, momentum=0.5)
-
         epoch_loss = []
         for iter in range(self.args.local_ep):
             batch_loss = []
@@ -68,11 +52,6 @@ class LocalUpdate(object):
                 loss = loss_function(log_probs, labels)
                 loss.backward()
                 optimizer.step()
-                #print
-                # if self.args.verbose and batch_idx % 10 == 0:
-                #     print('Update Epoch: {} [{}/{} ({:.0f}%)]\tLoss: {:.6f}'.format(
-                #         iter, batch_idx * len(images), len(self.ldr_train.dataset),
-                #                100. * batch_idx / len(self.ldr_train), loss.item()))
                 batch_loss.append(loss.item())
             epoch_loss.append(sum(batch_loss)/len(batch_loss))
         return net.state_dict(), sum(epoch_loss) / len(epoch_loss)
