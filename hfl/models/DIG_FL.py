@@ -1,4 +1,3 @@
-#计算每个client的权重，使用进行梯度下降
 import torch
 from torch.utils.data import DataLoader
 from torch import nn
@@ -22,15 +21,12 @@ class calculate_gradient(object):
 
     def calcluate(self,net,device):
         net.eval()
-        # optimizer = torch.optim.SGD(net.parameters(), lr=0.001)
 
-        # train and update
         loss_all = 0
         for batch_idx, (images, labels) in enumerate(self.ldr_train):
 
             images, labels = images.to(device), labels.to(device)
-            #初始化
-            #训练
+
             log_probs = net(images)
             # loss = self.loss_func(log_probs, labels)
             loss_function = torch.nn.CrossEntropyLoss()
@@ -52,7 +48,6 @@ def DIG_FL(w_local, w_g, net,validation_dataset,device):
     for i in range(len(w_local)):
         temp = cut_grad(w_local[i], w_g)
         net.load_state_dict(temp)
-        # grad_client.append(list(net.parameters()))
         grad_client=(list(net.parameters()))
         product = 0
         for (g,v) in zip(grad_client,grad_test):
