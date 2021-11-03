@@ -88,12 +88,12 @@ We use PyTorch to complete the participant's local training.
  ```
   ### Data segmentation (DataSplit.py):
  
- ```
- python DataSplit.py
+ ```shell
+ $python DataSplit.py
  ```
 
- ```
- python attackDataSplit.py
+ ```shell
+ $python attackDataSplit.py
  ```
 
 This experiment provides two types of attackdata (in models.attackdata.py):
@@ -103,7 +103,7 @@ This experiment provides two types of attackdata (in models.attackdata.py):
      Replace the label of part of the client's data with an error label
 
 ## Run Example
-Deploy DIGFL on three machines.
+Deploy DIGFL on three machines. One server and two participants.
 
 Firstly, clone this project to three machines through Git or other methods.
  ```shell
@@ -111,4 +111,19 @@ Firstly, clone this project to three machines through Git or other methods.
  $ cd DIGFL/clusterBeta/testDIGFL
  ```
  
- Choose a machine as the server and set its ip as the host.
+ Choose a machine as the server and set its ip as the host. Set related parameters.
+ 
+server:
+ ```
+    HOST=ip of server
+    world_size=2
+    partyid=0
+
+    net=FederatedLearning(HOST=HOST,PORT=PORT, world_size=world_size, partyid=partyid, net=net,optimizer=optimizer,
+                      dataset=data,lossfunction=lossfunction,device=device)
+  ```
+  Run the code on three machines separately.
+ ```shell
+ $p
+   ```
+ 
