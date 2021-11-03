@@ -86,3 +86,5 @@ We use PyTorch to complete the participant's local training.
  for i in range(world_size):
      server.send(new_net,id=i+1)
     ```
+
+## Run Example
