@@ -31,20 +31,17 @@ client_n.send(B,id=0)      server.rec(id=n)
 ### Training
 We use PyTorch to complete the participant's local training.
   ```
-        for epoch in range(epoch):
-            # train client network
-            lf=lossfunction
-            for i in range(iter):
-                epoch_loss = 0.0
-                for data, target in train_set:
-                    data, target = data.to(device), target.to(device)
-                    data, target = Variable(data), Variable(target)
-                    optimizer.zero_grad()
-                    output = net(data)
-                    loss = lf(output, target)
-                    epoch_loss += loss.item()
-                    loss.backward()
-                    optimizer.step()
-                if i == iter - 1:
-                    print('partyid: ', partyid, ', epoch ', epoch, ': ', epoch_loss / num_batches)
+  # train client model
+  lf=lossfunction
+  for i in range(iter):
+      epoch_loss = 0.0
+      for data, target in train_set:
+          data, target = data.to(device), target.to(device)
+          data, target = Variable(data), Variable(target)
+          optimizer.zero_grad()
+          output = net(data)
+          loss = lf(output, target)
+          epoch_loss += loss.item()
+          loss.backward()
+          optimizer.step()
   ```
