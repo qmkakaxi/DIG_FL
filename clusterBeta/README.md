@@ -136,7 +136,7 @@ server:
    partyid=2
    net=FederatedLearning(HOST=HOST,PORT=PORT, world_size=world_size, partyid=partyid, net=net,optimizer=optimizer,
                      dataset=data,lossfunction=lossfunction,device=device)
- ```
+  ```
   Run the code on three machines separately.
  ```shell
  $python server.py
@@ -145,7 +145,7 @@ server:
   ```shell
  $python client1.py
    ```
-    ```shell
-    
+   
+  ```shell
  $python client2.py
    ```
