@@ -130,7 +130,7 @@ server:
                      dataset=data,lossfunction=lossfunction,device=device)
  ```
     client2:
-  ```
+ ```
    HOST=ip of server
    world_size=2
    partyid=2
