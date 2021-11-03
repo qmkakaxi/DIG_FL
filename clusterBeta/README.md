@@ -151,3 +151,5 @@ This experiment provides two types of attackdata (in models.attackdata.py):
   2. generate_attack_data2:
      Replace the label of part of the client's data with an error label
 
+
+#### Note: The data in the code is all mnist data. If you want to use other data, you only need to modify the data reading method and add your network structure to models.Nets.
