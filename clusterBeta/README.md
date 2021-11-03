@@ -60,4 +60,15 @@ We use PyTorch to complete the participant's local training.
             data["partyid"] = partyid
             client.send(data)
   ```
-### Server calculate per-ecpo contribution
+#### Server calculate per-ecpo contribution
+  ```
+            # calculate contribution
+            if len(recDatas) > 1:
+                w_local = [data["net"] for data in recDatas]
+                #list to tensor
+                for i in range(len(w_local)):
+                    for key in w_local[i]:
+                        w_local[i][key] = torch.tensor((new_net[key])).to(device)
+                w_glob = net.state_dict()
+                DIG_FL(w_local, w_glob, net,dataset,device)
+  ```
