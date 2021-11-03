@@ -122,7 +122,7 @@ server:
                      dataset=data,lossfunction=lossfunction,device=device)
   ```
   client1:
-   ```
+  ```
    HOST=ip of server
    world_size=2
    partyid=1
@@ -141,9 +141,11 @@ server:
  ```shell
  $python server.py
    ```
+   
   ```shell
  $python client1.py
    ```
     ```shell
+    
  $python client2.py
    ```
