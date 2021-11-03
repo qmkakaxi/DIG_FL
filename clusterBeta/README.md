@@ -3,4 +3,6 @@ Federated learning and participant contribution evaluation system based on pytor
 
  ### Federatedlearning
  
+The federated optimization algorithm is [FedSGD](https://arxiv.org/pdf/1703.04730.pdf).
+ 
  
