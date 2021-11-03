@@ -1,6 +1,55 @@
 #                     **clusterBeta use Guide**
 Federated learning and participant contribution evaluation system based on pytorch and socket (can be deployed on servers and various edge nodes).
  
+## Run Example
+Deploy DIGFL on three machines. One server and two participants.
+
+#### Firstly, clone this project to three machines through Git or other methods.
+ ```shell
+ $ git clone https://github.com/qmkakaxi/DIG_FL.git
+ $ cd DIGFL/clusterBeta/testDIGFL
+ ```
+ 
+ #### Choose a machine as the server and set its ip as the host. Set related parameters.
+ 
+##### In server.py:
+ ```
+   HOST=ip of server
+   world_size=2
+   partyid=0
+   net=FederatedLearning(HOST=HOST,PORT=PORT, world_size=world_size, partyid=partyid, net=net,optimizer=optimizer,
+                     dataset=data,lossfunction=lossfunction,device=device)
+ ```
+##### In client1.py:
+ ```
+   HOST=ip of server
+   world_size=2
+   partyid=1
+   net=FederatedLearning(HOST=HOST,PORT=PORT, world_size=world_size, partyid=partyid, net=net,optimizer=optimizer,
+                     dataset=data,lossfunction=lossfunction,device=device)
+ ```
+ ####  In client2:
+ ```
+   HOST=ip of server
+   world_size=2
+   partyid=2
+   net=FederatedLearning(HOST=HOST,PORT=PORT, world_size=world_size, partyid=partyid, net=net,optimizer=optimizer,
+                     dataset=data,lossfunction=lossfunction,device=device)             
+ ```
+ 
+####  Run the code on three machines separately.
+  
+ ```shell
+ $python server.py
+   ```
+   
+  ```shell
+ $python client1.py
+   ```
+   
+  ```shell
+ $python client2.py
+   ```
  ## 
  
 The federated optimization algorithm is [FedSGD](https://arxiv.org/pdf/1602.05629.pdf).
