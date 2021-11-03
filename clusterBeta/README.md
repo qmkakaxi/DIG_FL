@@ -80,3 +80,9 @@ We use PyTorch to complete the participant's local training.
   else:
       new_net = recDatas[0]["net"]
   ```
+#### Server sends back model update
+  ```
+ # send model updates to all client
+ for i in range(world_size):
+     server.send(new_net,id=i+1)
+    ```
