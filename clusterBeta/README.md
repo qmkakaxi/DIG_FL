@@ -108,4 +108,7 @@ Deploy DIGFL on three machines.
 Firstly, clone this project to three machines through Git or other methods.
  ```shell
  $ git clone https://github.com/qmkakaxi/DIG_FL.git
+ $ cd DIGFL/clusterBeta/testDIGFL
  ```
+ 
+ Choose a machine as the server and set its ip as the host.
