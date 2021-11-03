@@ -9,25 +9,21 @@ The federated optimization algorithm is [FedSGD](https://arxiv.org/pdf/1602.0562
 ### Communication module
 We encapsulated the Socket and implemented functions: send, rev, and broadcast. The details are in [deliver](https://github.com/qmkakaxi/DIG_FL/blob/master/clusterBeta/models/deliver.py).
 
-  ### 数据分割(DataSplit.py):
- 
- 对已有数据进行分割：
+  ### Data segmentation (DataSplit.py):
  
  ```
  python DataSplit.py
  ```
- 本实验共有14个client，故将数据集划分为14份。
-  ### attackdata分割(attackDataSplit):
- 
+
   ```
  python attackDataSplit.py
  ```
 
- 本实验提供两种attackdata方式（封装在models.attackdata.py)：
- 1. generate_attack_data1:
-    将一部分用户数据中的2与6的数据混合，形成标签为2的新数据
- 2. generate_attack_data2:
-    将一部分client的数据的标签置换为错误标签
+This experiment provides two types of attackdata (in models.attackdata.py):
+  1. generate_attack_data1:
+     Mix the data of 2 and 6 in a part of the user data to form new data with label 2
+  2. generate_attack_data2:
+     Replace the label of part of the client's data with an error label
 
 #### initialization
   ```
