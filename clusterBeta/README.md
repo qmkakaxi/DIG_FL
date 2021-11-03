@@ -3,6 +3,7 @@ Federated learning and participant contribution evaluation system based on pytor
 
 
 ### Communication module
+We encapsulated the Socket and implemented functions such as send rev and broadcast.
 
  ### Federatedlearning
  
