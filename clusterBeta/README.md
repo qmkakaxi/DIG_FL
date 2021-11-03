@@ -92,7 +92,7 @@ We use PyTorch to complete the participant's local training.
  python DataSplit.py
  ```
 
-  ```
+ ```
  python attackDataSplit.py
  ```
 
@@ -103,3 +103,9 @@ This experiment provides two types of attackdata (in models.attackdata.py):
      Replace the label of part of the client's data with an error label
 
 ## Run Example
+Deploy DIGFL on three machines.
+
+Firstly, clone this project to three machines through Git or other methods.
+ ```shell
+ $ git clone https://github.com/qmkakaxi/DIG_FL.git
+ ```
