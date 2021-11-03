@@ -1,15 +1,15 @@
-##                     **DIGFL use Guide**
+#                     **DIGFL use Guide**
 Federated learning and participant contribution evaluation system based on pytorch and socket (can be deployed on servers and various edge nodes).
  
- ### Federatedlearning
+ ## Federatedlearning
  
 The federated optimization algorithm is [FedSGD](https://arxiv.org/pdf/1602.05629.pdf).
  
  
-#### Communication module
+### Communication module
 We encapsulated the Socket and implemented functions: send, rev, and broadcast. The details are in [deliver](https://github.com/qmkakaxi/DIG_FL/blob/master/clusterBeta/models/deliver.py).
 
-##### initialization
+#### initialization
   ```
   Host: ip of server
   port: available ports
@@ -22,10 +22,10 @@ We encapsulated the Socket and implemented functions: send, rev, and broadcast. 
   ```
  client=deliver(HOST,PORT,partyid=partyid,world_size=world_size)
   ```
-##### Example
+#### Example
 Server send data A to client n. Server receive data B from client n.
   ```
 server.send(A,id=n)        client_n.rec(id=0)
 client_n.send(B,id=0)      server.rec(id=n)
   ```
-
+### Training
