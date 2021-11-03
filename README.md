@@ -11,3 +11,6 @@ Here, we persent two versions: clusterBeta and standaloneBeta.
 If you want to deploy on multiple machines, please refer to [clusterBeta](https://github.com/qmkakaxi/DIG_FL/tree/master/clusterBeta).
 
 If you only want to test standalone, please refer to [standaloneBeta](https://github.com/qmkakaxi/DIG_FL/tree/master/standaloneBeta).
+
+
+If you want the MOTOR and REAL data set, please contact 
