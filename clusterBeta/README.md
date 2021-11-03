@@ -22,9 +22,10 @@ We encapsulated the Socket and implemented functions: send, rev, and broadcast. 
   ```
  client=deliver(HOST,PORT,partyid=partyid,world_size=world_size)
   ```
-##### Send and Receive
+##### Example
 server send data A to client n. server receive data B from client n.
   ```
 server.send(A,id=n)        client_n.rec(id=0)
 client_n.send(B,id=0)      server.rec(id=n)
   ```
+
