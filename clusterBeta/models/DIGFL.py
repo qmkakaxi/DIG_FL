@@ -117,21 +117,28 @@ def DIGFL_learning(HOST,PORT, world_size, partyid, net,optimizer,dataset,
                 recData=server.rec(id=i+1)
                 recDatas.append(recData)
 
-            # 聚合参数
+            # aggregation
             if len(recDatas) > 1:
                 new_net = merge([data["net"] for data in recDatas])
             else:
                 new_net = recDatas[0]["net"]
 
+
             # calculate contribution
-            w_local = [data["net"] for data in recDatas]
-            w_glob = net.state_dict()
-            DIG_FL(w_local, w_glob, net,dataset,device)
+            if len(recDatas) > 1:
+                w_local = [data["net"] for data in recDatas]
+                #list to tensor
+                for i in range(len(w_local)):
+                    for key in w_local[i]:
+                        w_local[i][key] = torch.tensor((new_net[key])).to(device)
+                w_glob = net.state_dict()
+                DIG_FL(w_local, w_glob, net,dataset,device)
+
             # send model updates to all client
             for i in range(world_size):
                 server.send(new_net,id=i+1)
 
-            # 格式转换 list to tensor
+            #  list to tensor
             for key in new_net:
                 new_net[key] = torch.tensor((new_net[key])).to(device)
             new_net = collections.OrderedDict(new_net)
