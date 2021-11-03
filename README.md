@@ -14,8 +14,4 @@ StandaloneBeta is for stand-alone testing, please refer to [standaloneBeta](http
  ### clusterBeta
 clusterBeta can be deployed on multiple machines for federated learning training and contribution calculation, please refer to [clusterBeta](https://github.com/qmkakaxi/DIG_FL/tree/master/clusterBeta).
 
-### standaloneBeta.
-, please refer to [standaloneBeta](https://github.com/qmkakaxi/DIG_FL/tree/master/standaloneBeta).
-
-
 If you want the MOTOR and REAL data set, please contact us.
