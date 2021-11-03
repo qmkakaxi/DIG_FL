@@ -6,3 +6,6 @@
 DIGFL is an efficient participant contribution evaluation for horizontal and vertical Federated Learning.
 
 
+Here, we persent two versions: clusterBeta and standaloneBeta.
+
+If you want to deploy on multiple machines, please refer to [clusterBeta](https://github.com/qmkakaxi/DIG_FL/tree/master/clusterBeta).
