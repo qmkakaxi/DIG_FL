@@ -12,6 +12,6 @@ Here, we persent two versions: clusterBeta and standaloneBeta.
 StandaloneBeta is for stand-alone testing, please refer to [standaloneBeta](https://github.com/qmkakaxi/DIG_FL/tree/master/standaloneBeta).
 
  ### clusterBeta
-clusterBeta can be deployed on multiple machines for federated learning training and contribution calculation, please refer to [clusterBeta](https://github.com/qmkakaxi/DIG_FL/tree/master/clusterBeta).
+ClusterBeta can be deployed on multiple machines for federated learning training and contribution calculation, please refer to [clusterBeta](https://github.com/qmkakaxi/DIG_FL/tree/master/clusterBeta).
 
 If you want the MOTOR and REAL data set, please contact us.
