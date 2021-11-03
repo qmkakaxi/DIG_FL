@@ -23,12 +23,12 @@ class Partition(object):
 if __name__=='__main__':
 
 
-    num_participants=14
+    num_participants=2
     trans_mnist = transforms.Compose([transforms.ToTensor(), transforms.Normalize((0.1307,), (0.3081,))])
     dataset_train = datasets.MNIST('data/', train=True, download=True, transform=trans_mnist)
     dict_users = mnist_iid(dataset_train, num_participants)
-    noisy_participant=4
-    noisy_rate=0.3
+    noisy_participant=1
+    noisy_rate=0.5
     dataset_attack,noisylist=generate_attack_data2('mnist', dict_users, dataset_train, noisy_participant, noisy_rate)
     torch.save(dict_users, 'dict_user')
     torch.save(noisylist,'noisylist')
