@@ -130,13 +130,13 @@ Deploy DIGFL on three machines. One server and two participants.
                      dataset=data,lossfunction=lossfunction,device=device)
  ```
  ####  In client2:
-
+ ```
    HOST=ip of server
    world_size=2
    partyid=2
    net=FederatedLearning(HOST=HOST,PORT=PORT, world_size=world_size, partyid=partyid, net=net,optimizer=optimizer,
                      dataset=data,lossfunction=lossfunction,device=device)             
-
+ ```
  
 ####  Run the code on three machines separately.
   
