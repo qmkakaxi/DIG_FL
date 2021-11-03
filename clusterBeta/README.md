@@ -28,7 +28,7 @@ Server send data A to client n. Server receive data B from client n.
 server.send(A,id=n)        client_n.rec(id=0)
 client_n.send(B,id=0)      server.rec(id=n)
   ```
-### Training
+### Train model and calculate contribution
 #### Participant's local training
 We use PyTorch to complete the participant's local training.
   ```
