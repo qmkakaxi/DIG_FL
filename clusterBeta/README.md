@@ -29,7 +29,7 @@ server.send(A,id=n)        client_n.rec(id=0)
 client_n.send(B,id=0)      server.rec(id=n)
   ```
 ### Training
-#### participant's local training
+#### Participant's local training
 We use PyTorch to complete the participant's local training.
   ```
   # train client model
@@ -46,7 +46,7 @@ We use PyTorch to complete the participant's local training.
           loss.backward()
           optimizer.step()
   ```
-#### send local gradients to server
+#### Participants send local gradients to server
   ```
             client_net = copy.deepcopy(net.state_dict())
 
@@ -60,3 +60,4 @@ We use PyTorch to complete the participant's local training.
             data["partyid"] = partyid
             client.send(data)
   ```
+### Server calculate per-ecpo contribution
