@@ -7,7 +7,7 @@ The federated optimization algorithm is [FedSGD](https://arxiv.org/pdf/1602.0562
  
  
 #### Communication module
-We encapsulated the Socket and implemented functions such as send rev and broadcast.
+We encapsulated the Socket and implemented functions such as send rev and broadcast. The details are in [deliver](https://github.com/qmkakaxi/DIG_FL/blob/master/clusterBeta/models/deliver.py).
 
 ##### initialization
   ```
