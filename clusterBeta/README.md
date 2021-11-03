@@ -60,7 +60,7 @@ We use PyTorch to complete the participant's local training.
             data["partyid"] = partyid
             client.send(data)
   ```
-#### Server calculate per-ecpo contribution
+#### Server calculate per-ecpoh contribution
   ```
             # calculate contribution
             if len(recDatas) > 1:
