@@ -46,3 +46,17 @@ We use PyTorch to complete the participant's local training.
           loss.backward()
           optimizer.step()
   ```
+#### send local gradients to server
+  ```
+            client_net = copy.deepcopy(net.state_dict())
+
+            # tensor to list
+            client_net = dict(client_net)
+            for key in client_net:
+                client_net[key] = client_net[key].cpu().numpy().tolist()
+
+            data = {}
+            data["net"] = client_net
+            data["partyid"] = partyid
+            client.send(data)
+  ```
