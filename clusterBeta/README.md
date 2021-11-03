@@ -12,10 +12,13 @@ We encapsulated the Socket and implemented functions: send, rev, and broadcast. 
 ##### initialization
   ```
   Host: ip of server
-  port: Available ports
+  port: available ports
   partyid: id of this machine, id 0 is the server
   world_size: num of participant
   ```
   ```
  server=deliver(HOST,PORT,partyid=0,world_size=world_size)
+  ```
+  ```
+ client=deliver(HOST,PORT,partyid=partyid,world_size=world_size)
   ```
