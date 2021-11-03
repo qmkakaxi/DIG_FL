@@ -120,23 +120,23 @@ server:
    partyid=0
    net=FederatedLearning(HOST=HOST,PORT=PORT, world_size=world_size, partyid=partyid, net=net,optimizer=optimizer,
                      dataset=data,lossfunction=lossfunction,device=device)
-  ```
+ ```
   client1:
-  ```
+ ```
    HOST=ip of server
    world_size=2
    partyid=1
    net=FederatedLearning(HOST=HOST,PORT=PORT, world_size=world_size, partyid=partyid, net=net,optimizer=optimizer,
                      dataset=data,lossfunction=lossfunction,device=device)
-  ```
+ ```
     client2:
-   ```
+  ```
    HOST=ip of server
    world_size=2
    partyid=2
    net=FederatedLearning(HOST=HOST,PORT=PORT, world_size=world_size, partyid=partyid, net=net,optimizer=optimizer,
                      dataset=data,lossfunction=lossfunction,device=device)
-  ```
+ ```
   Run the code on three machines separately.
  ```shell
  $python server.py
