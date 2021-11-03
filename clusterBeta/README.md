@@ -22,3 +22,8 @@ We encapsulated the Socket and implemented functions: send, rev, and broadcast. 
   ```
  client=deliver(HOST,PORT,partyid=partyid,world_size=world_size)
   ```
+##### send
+server send data A to client n.
+  ```
+server.send(A,id=n)
+  ```
