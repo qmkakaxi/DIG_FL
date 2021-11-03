@@ -32,45 +32,45 @@ client_n.send(B,id=0)      server.rec(id=n)
 #### Participant's local training
 We use PyTorch to complete the participant's local training.
   ```
-  # train client model
-  lf=lossfunction
-  for i in range(iter):
-      epoch_loss = 0.0
-      for data, target in train_set:
-          data, target = data.to(device), target.to(device)
-          data, target = Variable(data), Variable(target)
-          optimizer.zero_grad()
-          output = net(data)
-          loss = lf(output, target)
-          epoch_loss += loss.item()
-          loss.backward()
-          optimizer.step()
+ # train client model
+ lf=lossfunction
+ for i in range(iter):
+     epoch_loss = 0.0
+     for data, target in train_set:
+         data, target = data.to(device), target.to(device)
+         data, target = Variable(data), Variable(target)
+         optimizer.zero_grad()
+         output = net(data)
+         loss = lf(output, target)
+         epoch_loss += loss.item()
+         loss.backward()
+         optimizer.step()
   ```
 #### Participants send local gradients to server
   ```
-            client_net = copy.deepcopy(net.state_dict())
+  client_net = copy.deepcopy(net.state_dict())
 
-            # tensor to list
-            client_net = dict(client_net)
-            for key in client_net:
-                client_net[key] = client_net[key].cpu().numpy().tolist()
+  # tensor to list
+  client_net = dict(client_net)
+  for key in client_net:
+      client_net[key] = client_net[key].cpu().numpy().tolist()
 
-            data = {}
-            data["net"] = client_net
-            data["partyid"] = partyid
-            client.send(data)
+  data = {}
+  data["net"] = client_net
+  data["partyid"] = partyid
+  client.send(data)
   ```
 #### Server calculate per-ecpoh contribution
   ```
-   # calculate contribution
-   
-    #list to tensor
-    for i in range(len(w_local)):
-        for key in w_local[i]:
-            w_local[i][key] = torch.tensor((new_net[key])).to(device)
-    w_glob = net.state_dict()
-    
-    DIG_FL(w_local, w_glob, net,dataset,device)
+  # calculate contribution
+
+   #list to tensor
+   for i in range(len(w_local)):
+       for key in w_local[i]:
+           w_local[i][key] = torch.tensor((new_net[key])).to(device)
+   w_glob = net.state_dict()
+
+   DIG_FL(w_local, w_glob, net,dataset,device)
   ```
 #### Server performs aggregation
   ```
