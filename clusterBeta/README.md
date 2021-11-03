@@ -111,7 +111,7 @@ Firstly, clone this project to three machines through Git or other methods.
  $ cd DIGFL/clusterBeta/testDIGFL
  ```
  
- Choose a machine as the server and set its ip as the host. Set related parameters.
+ #### Choose a machine as the server and set its ip as the host. Set related parameters.
  
 In server.py:
  ```
@@ -121,7 +121,7 @@ In server.py:
    net=FederatedLearning(HOST=HOST,PORT=PORT, world_size=world_size, partyid=partyid, net=net,optimizer=optimizer,
                      dataset=data,lossfunction=lossfunction,device=device)
  ```
- In client1.py:
+#### In client1.py:
  ```
    HOST=ip of server
    world_size=2
@@ -129,7 +129,7 @@ In server.py:
    net=FederatedLearning(HOST=HOST,PORT=PORT, world_size=world_size, partyid=partyid, net=net,optimizer=optimizer,
                      dataset=data,lossfunction=lossfunction,device=device)
  ```
-   In client2:
+ ####  In client2:
 
    HOST=ip of server
    world_size=2
@@ -139,6 +139,7 @@ In server.py:
  ```
  
   Run the code on three machines separately.
+  
  ```shell
  $python server.py
    ```
