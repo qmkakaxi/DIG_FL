@@ -115,15 +115,35 @@ Firstly, clone this project to three machines through Git or other methods.
  
 server:
  ```
-    HOST=ip of server
-    world_size=2
-    partyid=0
-
-    net=FederatedLearning(HOST=HOST,PORT=PORT, world_size=world_size, partyid=partyid, net=net,optimizer=optimizer,
-                      dataset=data,lossfunction=lossfunction,device=device)
+   HOST=ip of server
+   world_size=2
+   partyid=0
+   net=FederatedLearning(HOST=HOST,PORT=PORT, world_size=world_size, partyid=partyid, net=net,optimizer=optimizer,
+                     dataset=data,lossfunction=lossfunction,device=device)
+  ```
+  client1:
+   ```
+   HOST=ip of server
+   world_size=2
+   partyid=1
+   net=FederatedLearning(HOST=HOST,PORT=PORT, world_size=world_size, partyid=partyid, net=net,optimizer=optimizer,
+                     dataset=data,lossfunction=lossfunction,device=device)
+  ```
+    client2:
+   ```
+   HOST=ip of server
+   world_size=2
+   partyid=2
+   net=FederatedLearning(HOST=HOST,PORT=PORT, world_size=world_size, partyid=partyid, net=net,optimizer=optimizer,
+                     dataset=data,lossfunction=lossfunction,device=device)
   ```
   Run the code on three machines separately.
  ```shell
- $p
+ $python server.py
    ```
- 
+  ```shell
+ $python client1.py
+   ```
+    ```shell
+ $python client2.py
+   ```
