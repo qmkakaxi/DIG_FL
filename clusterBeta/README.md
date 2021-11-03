@@ -113,7 +113,7 @@ Firstly, clone this project to three machines through Git or other methods.
  
  Choose a machine as the server and set its ip as the host. Set related parameters.
  
-server:
+In server,py:
  ```
    HOST=ip of server
    world_size=2
@@ -121,7 +121,7 @@ server:
    net=FederatedLearning(HOST=HOST,PORT=PORT, world_size=world_size, partyid=partyid, net=net,optimizer=optimizer,
                      dataset=data,lossfunction=lossfunction,device=device)
  ```
-  client1:
+ In client1.py:
  ```
    HOST=ip of server
    world_size=2
@@ -129,8 +129,8 @@ server:
    net=FederatedLearning(HOST=HOST,PORT=PORT, world_size=world_size, partyid=partyid, net=net,optimizer=optimizer,
                      dataset=data,lossfunction=lossfunction,device=device)
  ```
-    client2:
- ```
+   In client2:
+
    HOST=ip of server
    world_size=2
    partyid=2
