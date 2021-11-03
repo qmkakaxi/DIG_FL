@@ -8,9 +8,11 @@ DIGFL is an efficient participant contribution evaluation for horizontal and ver
 
 Here, we persent two versions: clusterBeta and standaloneBeta.
 
+ ### clusterBeta
 If you want to deploy on multiple machines, please refer to [clusterBeta](https://github.com/qmkakaxi/DIG_FL/tree/master/clusterBeta).
 
+### standaloneBeta.
 If you only want to test standalone, please refer to [standaloneBeta](https://github.com/qmkakaxi/DIG_FL/tree/master/standaloneBeta).
 
 
-If you want the MOTOR and REAL data set, please contact 
+If you want the MOTOR and REAL data set, please contact us.
