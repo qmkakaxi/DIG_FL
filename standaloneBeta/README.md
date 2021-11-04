@@ -22,6 +22,8 @@ Calculate the utility function of all participants through retraining.
    ```shell
  $python calculate_groundtruth.py
  ```
+ ### Note: The data in the code is all mnist data. If you want to use other data, you only need to modify the data reading method and add your network structure to models.Nets.
+
 ### DIG-FL V.S. Actual Shapley value for VFL.
 
 In [DIG_vfl](https://github.com/qmkakaxi/DIG_FL/tree/master/standaloneBeta/DIGFL_vfl)
