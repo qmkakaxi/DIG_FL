@@ -18,5 +18,8 @@ Calculate the utility function of all participants through retraining.
   ```shell
  $python retrain_mnist.py
  ```
- 
+ Calculate the marginal contribution and the actual shapley value through the utility function.
+   ```shell
+ $python calculate_groundtruth.py
+ ```
 ### DIG-FL V.S. Actual Shapley value for VFL.
