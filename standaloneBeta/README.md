@@ -10,6 +10,13 @@ In [DIG_hfl](https://github.com/qmkakaxi/DIG_FL/tree/master/standaloneBeta/DIGFL
 #### calculate estimated Shapley value
 
  ```shell
- $python DIG_FL_mnist.py.py
+ $python DIG_FL_mnist.py.
  ```
+ ### calculate Actual Shapley value
+ 
+Calculate the utility function of all participants through retraining.
+  ```shell
+ $python retrain_mnist.py
+ ```
+ 
 ### DIG-FL V.S. Actual Shapley value for VFL.
