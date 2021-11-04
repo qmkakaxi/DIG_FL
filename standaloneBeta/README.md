@@ -6,10 +6,10 @@ StandaloneBeta simulates federated learning in a standalone case to test how clo
 
 ### DIG-FL V.S. Actual Shapley value for HFL.
 
-In [DIG_FL](https://github.com/qmkakaxi/DIG_FL/tree/master/standaloneBeta/DIGFL_hfl)
+In [DIG_hfl](https://github.com/qmkakaxi/DIG_FL/tree/master/standaloneBeta/DIGFL_hfl)
 #### calculate estimated Shapley value
 
  ```shell
- $python DataSplit.py
+ $python DIG_FL_mnist.py.py
  ```
 ### DIG-FL V.S. Actual Shapley value for VFL.
