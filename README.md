@@ -19,4 +19,4 @@ Please refer to [standaloneBeta](https://github.com/qmkakaxi/DIG_FL/tree/master/
 
 Please refer to [clusterBeta](https://github.com/qmkakaxi/DIG_FL/tree/master/clusterBeta).
 
-If you want the MOTOR and REAL data set, please contact us.
+### If you want the MOTOR and REAL dataset, please contact us.
