@@ -10,7 +10,7 @@ Here, we persent two versions: clusterBeta and standaloneBeta.
 
 ### standaloneBeta.
 
-#### StandaloneBeta is a stand-alone version,StandaloneBeta is a standalone version,to compare the DIGFL with actual shapley value.
+#### StandaloneBeta is a stand-alone version,to compare the DIGFL with actual shapley value.
 
 please refer to [standaloneBeta](https://github.com/qmkakaxi/DIG_FL/tree/master/standaloneBeta).
 
