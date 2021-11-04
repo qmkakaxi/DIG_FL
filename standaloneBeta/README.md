@@ -42,5 +42,5 @@ Calculate the utility function of all participants through retraining.
    ```shell
  $python calculate_groundtruth.py
  ```
- #### Note: The data are all in the . If you want to use other data, you only need to modify the data reading method.
+ #### Note: The data are all in the /data. If you want to use other data, you only need to modify the data reading method.
 
