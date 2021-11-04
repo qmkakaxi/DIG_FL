@@ -6,11 +6,11 @@
 DIGFL is an efficient participant contribution evaluation for horizontal and vertical Federated Learning.
 
 
-Here, we persent two versions: clusterBeta and standaloneBeta.
+Here, we persent two versions: standaloneBeta and clusterBeta.
 
 ### standaloneBeta.
 
-#### StandaloneBeta is a stand-alone version,to compare the DIGFL with actual shapley value.
+#### StandaloneBeta is a stand-alone version, to compare the DIGFL with actual shapley value.
 
 Please refer to [standaloneBeta](https://github.com/qmkakaxi/DIG_FL/tree/master/standaloneBeta).
 
