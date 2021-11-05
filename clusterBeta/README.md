@@ -1,7 +1,7 @@
 #                     **clusterBeta use Guide**
 Federated learning and participant contribution evaluation system based on pytorch and socket (can be deployed on servers and various edge nodes).
  
- Some functions are not perfect, we will continue to develop them.
+Some functions are not perfect and complete, we will continue to develop them.
 ## Run Example
 Deploy DIGFL on three machines. One server and two participants.
 
