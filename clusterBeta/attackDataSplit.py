@@ -23,6 +23,7 @@ class Partition(object):
 if __name__=='__main__':
 
 
+     # Divide the dataset
     num_participants=2
     trans_mnist = transforms.Compose([transforms.ToTensor(), transforms.Normalize((0.1307,), (0.3081,))])
     dataset_train = datasets.MNIST('data/', train=True, download=True, transform=trans_mnist)
