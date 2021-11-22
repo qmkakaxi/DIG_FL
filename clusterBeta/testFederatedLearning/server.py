@@ -29,7 +29,7 @@ if __name__ == '__main__':
     data = []
     device = torch.device('cuda:{}'.format(args.gpu) if torch.cuda.is_available() and args.gpu != -1 else 'cpu')
 
-    #设置相关参数
+    #
     HOST=args.HOST
     PORT=args.PORT_
     world_size=2
@@ -40,7 +40,7 @@ if __name__ == '__main__':
                       dataset=data,lossfunction=lossfunction,device=device)
 
 
-    # 加载测试数据
+    # 
     trans_mnist = transforms.Compose([transforms.ToTensor(), transforms.Normalize((0.1307,), (0.3081,))])
     dataset_test = datasets.MNIST('data/', train=False, download=True, transform=trans_mnist)
     test_set = torch.utils.data.DataLoader(dataset_test, batch_size=args.bs)
@@ -49,6 +49,6 @@ if __name__ == '__main__':
     print("Testing accuracy: {:.2f}".format(test_accuracy))
     print("Testing loss: {:.2f}".format(test_loss))
 
-    #保存网络参数
+    #
     w_wag=net.state_dict()
     torch.save(w_wag,'w_wag')
