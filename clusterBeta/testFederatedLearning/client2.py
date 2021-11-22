@@ -28,7 +28,7 @@ if __name__ == '__main__':
     data = torch.load(dataset)
     device = torch.device('cuda:{}'.format(args.gpu) if torch.cuda.is_available() and args.gpu != -1 else 'cpu')
 
-    #设置相关参数
+
     HOST=args.HOST
     PORT=args.PORT_
     world_size=2
