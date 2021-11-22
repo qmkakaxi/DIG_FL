@@ -1,11 +1,3 @@
-#!/usr/bin/env python
-# -*- coding:utf-8 -*-
-# @FileName  :main_fed_mnist_retrain.py.py
-# @Time      :2020/12/26 3:35 下午
-# @Author    :wangjunhao
-
-
-
 
 
 import copy
@@ -35,7 +27,7 @@ def train(idxs_users):
 
 
 
-    #设置cpu
+    #set device
     args.device = torch.device('cuda:{}'.format(args.gpu) if torch.cuda.is_available() and args.gpu != -1 else 'cpu')
 
     trans_mnist = transforms.Compose([transforms.ToTensor(), transforms.Normalize((0.1307,), (0.3081,))])
